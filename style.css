@@ -105,6 +105,7 @@ footer {
   width: 100%;
 }
 .company-logo {
+  /* aspect-ratio: 5/2; */
   background-color: var(--white);
   object-fit: fill;
   margin: 10px;
@@ -213,6 +214,7 @@ nav {
 .menu-list {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   margin: 0 10px;
   color: white;
 }
@@ -273,6 +275,7 @@ nav {
 }
 .section-title {
   color: var(--primary-color);
+  font-size: 1.2rem;
 }
 .about-us {
   aspect-ratio: 16/9;
@@ -443,6 +446,9 @@ article .container {
   height: 100%;
   width: 100%;
 }
+.card-content {
+  padding: 5px;
+}
 .card-title {
   padding: 20px 0;
   font-size: 1.4rem;
@@ -517,6 +523,12 @@ footer .container {
   position: absolute;
   animation: marquee 10s linear infinite;
 }
+.footer-social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: 1em 0;
+}
 
 span {
   float: left;
@@ -563,12 +575,14 @@ span {
   .navbar {
     display: none;
   }
+  .menu {
+    display: flex;
+  }
 }
 @media (max-width: 891px) {
   nav {
     display: none;
   }
-
   .slider-layer .container {
     width: 50%;
     margin-left: 10px;
@@ -634,8 +648,5 @@ span {
   }
   .update-card-item .card-title {
     color: var(--white);
-  }
-  .menu {
-    display: flex;
   }
 }
