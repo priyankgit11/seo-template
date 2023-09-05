@@ -55,17 +55,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.hidden {
-  display: none;
-}
-.show {
-  display: flex;
-}
+
 .button {
   background-color: var(--complementary-color);
   display: inline-block;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
 }
 .icon-hover:hover svg {
   fill: var(--complementary-color);
@@ -95,6 +91,10 @@ a {
   color: var(--complementary-color);
 }
 header {
+  display: flex;
+  flex-direction: column;
+}
+header .container {
   display: flex;
   justify-content: space-between;
 }
@@ -174,6 +174,7 @@ nav {
 .icon {
   height: 20px;
   width: 20px;
+  margin: 0 10px;
   /* transform: scale(0.2); */
   fill: var(--second-color);
 }
@@ -181,6 +182,39 @@ nav {
   height: 40px;
   width: 40px;
   fill: var(--white);
+}
+.submit-btn {
+  fill: var(--primary-color);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.submit-icon {
+  fill: var(--primary-color);
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.menu-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-btn {
+  cursor: pointer;
+  aspect-ratio: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  color: white;
 }
 .slider {
   aspect-ratio: 16/7;
@@ -361,6 +395,10 @@ article .container {
 .subscribe .container {
   width: 1296px;
 }
+.subscribe-email {
+  outline: none;
+  border: none;
+}
 .subscribe .container > * {
   width: 100%;
 }
@@ -374,9 +412,12 @@ article .container {
   top: 0;
   left: 0;
   padding: 20px;
+  margin: 0 10px;
   transition: all 0.5s ease-in;
   min-width: 100px;
   width: 80%;
+  border-radius: 10px;
+  border: 2px solid var(--white);
 }
 .updates {
   display: flex;
@@ -393,10 +434,14 @@ article .container {
   width: 100%;
 }
 .update-card-item {
-  min-width: 256px;
+  max-width: 300px;
   height: 100%;
   overflow: hidden;
   color: var(--white);
+}
+.update-img {
+  height: 100%;
+  width: 100%;
 }
 .card-title {
   padding: 20px 0;
@@ -507,9 +552,13 @@ span {
   display: flex;
   justify-content: center;
 }
-.subscribe-email {
-  outline: none;
+.hidden {
+  display: none;
 }
+.show {
+  display: flex;
+}
+
 @media screen and (max-width: 1350px) {
   .navbar {
     display: none;
@@ -519,9 +568,7 @@ span {
   nav {
     display: none;
   }
-  .header-contact-item {
-    display: none;
-  }
+
   .slider-layer .container {
     width: 50%;
     margin-left: 10px;
@@ -542,6 +589,10 @@ span {
 @media (max-width: 610px) {
   .slider {
     aspect-ratio: 16/11;
+    background-attachment: scroll;
+  }
+  .header-contact-item {
+    display: none;
   }
   .slider-title {
     font-size: 1.2rem;
@@ -551,7 +602,7 @@ span {
   }
   .about-us {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: nowrap;
   }
   .about-title {
@@ -571,5 +622,20 @@ span {
   }
   span img {
     width: 100px;
+  }
+  .product-card-item .card-layer {
+    opacity: 1;
+  }
+  .input-email {
+    font-size: 1rem;
+  }
+  .update-card-item {
+    border-radius: 40px;
+  }
+  .update-card-item .card-title {
+    color: var(--white);
+  }
+  .menu {
+    display: flex;
   }
 }

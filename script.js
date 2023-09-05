@@ -14,6 +14,13 @@ marqueeSpan.forEach((ele) => {
   ele.style.width = `${spanWidth}%`;
 });
 console.log(marqueeSpan[0].style.width);
+/////////////////////////////////////////////////////////////////////////////////Open Menu-list onclick
+const menuBtn = document.querySelector(".menu-btn");
+console.log(menuBtn);
+const menuList = document.querySelector(".menu-list");
+menuBtn.addEventListener("click", () => {
+  menuList.classList.toggle("hidden");
+});
 
 ////////////////////////////////////////////////////////////////////////////////// slider
 const animationTiming = {
