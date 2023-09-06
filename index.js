@@ -6,6 +6,28 @@ console.log(cardsImages);
 cardItems.forEach((ele, i) => {
   ele.style.backgroundImage = `url("${cardsImages[i].src}")`;
 });
+//////////////////////////////////////////////////////////////// scroll to top
+let mybutton = document.querySelector(".go-up");
+mybutton.addEventListener("click", topFunction);
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.classList.remove("hidden");
+  } else {
+    mybutton.classList.add("hidden");
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 ////////////////////////////////////////////////////////// setting width of span according to number of images in brand slider
 const marqueeSpan = Array.from(document.getElementsByClassName("marquee-span"));

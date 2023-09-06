@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow " />
-    <link href="style.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <noscript>
@@ -40,12 +40,34 @@
     <link rel="icon" type="image/x-icon" href="" />
   </head>
   <body>
+    <div class="go-up hidden">
+      <div class="container swap-back-complementary">
+        <svg
+          viewBox="0 0 16 16"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          class="large-icon"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M13 14v-2l-5-5-5 5v2l5-5z"></path>
+            <path d="M13 9v-2l-5-5-5 5v2l5-5z"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
     <!-- Header starts -->
     <header>
       <div class="container">
         <div class="logo swap-back-white">
           <div class="container">
-            <a href="#" aria-label="Company Home page">
+            <a href="index.html" aria-label="Company Home page">
               <img
                 src="images/logo.webp"
                 alt="company-logo"
@@ -57,36 +79,48 @@
         <nav class="swap-back-black">
           <div class="navbar">
             <div class="navbar-item">
-              <a href="#" class="hover-underline" aria-label="Home page link"
+              <a
+                href="index.html"
+                class="hover-underline"
+                aria-label="Home page link"
                 >HOME</a
               >
             </div>
             <div class="navbar-item">
-              <a href="#" class="hover-underline" aria-label="About page link"
+              <a
+                href="about.html"
+                class="hover-underline"
+                aria-label="About page link"
                 >ABOUT</a
               >
             </div>
             <div class="navbar-item">
               <a
-                href="#"
+                href="products.html"
                 class="hover-underline"
                 aria-label="Products page link"
                 >PRODUCTS</a
               >
             </div>
             <div class="navbar-item">
-              <a href="#" class="hover-underline" aria-label="Updates page link"
+              <a
+                href="updates.html"
+                class="hover-underline"
+                aria-label="Updates page link"
                 >UPDATES</a
               >
             </div>
             <div class="navbar-item">
-              <a href="#" class="hover-underline" aria-label="Gallery page link"
+              <a
+                href="gallery.html"
+                class="hover-underline"
+                aria-label="Gallery page link"
                 >GALLERY</a
               >
             </div>
             <div class="navbar-item">
               <a
-                href="#"
+                href="contact.html"
                 class="hover-underline"
                 aria-label="Contact us page link"
                 >CONTACT US</a
@@ -297,32 +331,50 @@
         </div>
         <div class="menu-list hidden">
           <div class="menu-item">
-            <a href="#" class="hover-underline" aria-label="Home Page link"
+            <a
+              href="index.html"
+              class="hover-underline"
+              aria-label="Home Page link"
               >HOME</a
             >
           </div>
           <div class="menu-item">
-            <a href="#" class="hover-underline" aria-label="About Page link"
+            <a
+              href="about.html"
+              class="hover-underline"
+              aria-label="About Page link"
               >ABOUT</a
             >
           </div>
           <div class="menu-item">
-            <a href="#" class="hover-underline" aria-label="Products Page link"
+            <a
+              href="products.html"
+              class="hover-underline"
+              aria-label="Products Page link"
               >PRODUCTS</a
             >
           </div>
           <div class="menu-item">
-            <a href="#" class="hover-underline" aria-label="Updates Page link"
+            <a
+              href="updates.html"
+              class="hover-underline"
+              aria-label="Updates Page link"
               >UPDATES</a
             >
           </div>
           <div class="menu-item">
-            <a href="#" class="hover-underline" aria-label="Gallery Page link"
+            <a
+              href="gallery.html"
+              class="hover-underline"
+              aria-label="Gallery Page link"
               >GALLERY</a
             >
           </div>
           <div class="menu-item">
-            <a href="#" class="hover-underline" aria-label="Contact Us link"
+            <a
+              href="contact.html"
+              class="hover-underline"
+              aria-label="Contact Us link"
               >CONTACT US</a
             >
           </div>
@@ -554,6 +606,7 @@
                 value=""
                 placeholder="Enter Your Email Here"
                 class="input-email"
+                required
               />
               <button
                 type="submit"
@@ -603,7 +656,7 @@
           <h2>Latest Updates</h2>
         </div>
         <div class="card update-card">
-          <div class="update-card-item swap-back-complementary">
+          <div class="update-card-item">
             <div class="card-img-section">
               <img
                 src="images/update.webp"
@@ -620,7 +673,7 @@
               </div>
             </div>
           </div>
-          <div class="update-card-item swap-back-complementary">
+          <div class="update-card-item">
             <div class="card-img-section">
               <img
                 src="images/update.webp"
@@ -637,7 +690,7 @@
               </div>
             </div>
           </div>
-          <div class="update-card-item swap-back-complementary">
+          <div class="update-card-item">
             <div class="card-img-section">
               <img
                 src="images/update.webp"
@@ -673,10 +726,7 @@
               />
             </span>
             <span class="marquee-span"
-              ><img
-                src="images/logo-slider-item.webp"
-                alt="logo-0"
-                loading="lazy"
+              ><img src="images/logo.webp" alt="logo-0" loading="lazy"
             /></span>
             <span class="marquee-span"
               ><img
@@ -711,23 +761,53 @@
         <div class="quick-links footer-item">
           <div class="footer-section-heading">Quick Links</div>
           <div class="footer-section-content">
-            <div class="footer-section-link hover-underline">
-              <a href="#" aria-label="Home page link">Home</a>
+            <div class="footer-section-link">
+              <a
+                href="index.html"
+                aria-label="Home page link"
+                class="hover-underline"
+                >Home</a
+              >
             </div>
-            <div class="footer-section-link hover-underline">
-              <a href="#" aria-label="About Us page link">About Us</a>
+            <div class="footer-section-link">
+              <a
+                href="about.html"
+                aria-label="About Us page link"
+                class="hover-underline"
+                >About Us</a
+              >
             </div>
-            <div class="footer-section-link hover-underline">
-              <a href="#" aria-label="Products page link">Products</a>
+            <div class="footer-section-link">
+              <a
+                href="products.html"
+                aria-label="Products page link"
+                class="hover-underline"
+                >Products</a
+              >
             </div>
-            <div class="footer-section-link hover-underline">
-              <a href="#" aria-label="Updates page link">Updates</a>
+            <div class="footer-section-link">
+              <a
+                href="updates.html"
+                aria-label="Updates page link"
+                class="hover-underline"
+                >Updates</a
+              >
             </div>
-            <div class="footer-section-link hover-underline">
-              <a href="#" aria-label="Gallery page link">Gallery</a>
+            <div class="footer-section-link">
+              <a
+                href="gallery.html"
+                aria-label="Gallery page link"
+                class="hover-underline"
+                >Gallery</a
+              >
             </div>
-            <div class="footer-section-link hover-underline">
-              <a href="#" aria-label="Contact Us page link">Contact Us</a>
+            <div class="footer-section-link">
+              <a
+                href="contact.html"
+                aria-label="Contact Us page link"
+                class="hover-underline"
+                >Contact Us</a
+              >
             </div>
           </div>
         </div>
@@ -738,10 +818,11 @@
               <div class="input-container">
                 <form autocomplete="on">
                   <input
-                    type="text"
+                    type="email"
                     name="subscribe"
                     placeholder="Enter Your Email here"
                     class="input-email"
+                    required
                   />
                   <button
                     type="submit"
@@ -955,6 +1036,6 @@
         </div>
       </div>
     </footer>
-    <script src="script.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
