@@ -278,143 +278,96 @@ p {
   font-size: 5rem;
   font-weight: 500;
 }
-.section-intro .container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 3em;
-  max-height: fit-content;
-}
-.section-intro .container > * {
-  flex: 1;
-}
-.about-img img {
-  object-fit: contain;
-  max-height: 700px;
-}
-.about-content {
-  padding: 0 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about-content .container {
-  display: flex;
-  flex-direction: column;
-}
-.section-title {
-  margin: 1em 0;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--primary-color);
-}
-.section-heading {
-  padding: 0.5em 0;
-}
-.section-description {
-  font-size: 1.1em;
-}
-.our-mission,
-.our-vision,
-.our-team {
+.contact {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2em 0;
 }
-.our-mission .container,
-.our-vision .container {
-  padding: 0 2em;
+.contact .container {
   width: 100%;
   max-width: 1170px;
   display: flex;
-  flex: 1 1 auto;
-  gap: 20px;
+  gap: 40px;
+  padding: 20px;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
-.our-mission .container > *,
-.our-vision .container > * {
-  flex: 1;
+.in-touch {
+  width: 30%;
 }
-.mission-content,
-.vision-content {
-  display: flex;
-  flex-direction: column;
+.message {
+  width: 70%;
 }
-.mission-img,
-.vision-img {
-  max-width: fit-content;
-  display: flex;
-  justify-content: space-between;
-}
-.testimonial-section * {
-  color: var(--white);
-}
-.testimonial-section .container {
+.in-touch,
+.message {
   margin: 1em 0;
-  width: 100%;
-  max-width: 1170px;
+  border-top: 2px solid var(--primary-color);
 }
-.team-title,
-.testimonial-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  font-weight: bold;
+.in-touch .large-icon {
+  fill: var(--black);
 }
-.member-name,
-.testimonial-name {
-  font-size: 1.3em;
-  color: var(--black);
-}
-.testimonial-company {
-  color: var(--complementary-color);
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.our-team .container {
-  width: 100%;
-  max-width: 1170px;
+.contact-info {
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
-.our-team .container > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.team-cards {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
   gap: 20px;
-  flex-wrap: wrap;
 }
-.card {
+.contact-info a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: fit-content;
+}
+.contact-info svg {
+  flex-shrink: 0;
+}
+.contact-info a:hover {
+  color: var(--primary-color);
+}
+.contact-info a:hover svg {
+  fill: var(--primary-color);
+}
+.location-svg {
+  flex: 1 1 auto;
+}
+.message {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-.card-content {
-  background-color: var(--white);
-  position: relative;
-  top: -20px;
-  width: 80%;
-}
-article {
+.message form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-article .container {
+.form-heading {
+  font-weight: bold;
+}
+.form-item {
+  margin: 0.5em 0;
+}
+.form-item span {
+  color: var(--primary-color);
+}
+.field-section,
+.field-section-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.input-field {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 30px;
+  padding: 5px;
+  font-size: inherit;
+}
+.form-submit-btn {
+  padding: 1em 2em;
+  border: 0;
+}
+.form-submit-btn:hover {
+  background-color: var(--dark);
+}
+iframe {
+  width: 100%;
 }
 footer {
   padding: 60px;
@@ -456,7 +409,6 @@ footer .container {
 .page-heading {
   text-transform: uppercase;
 }
-
 .footer-section-content {
   display: flex;
   flex-direction: column;
@@ -487,7 +439,6 @@ footer .container {
 .show {
   display: flex;
 }
-
 @media screen and (max-width: 1440px) {
   .logo .container {
     margin: 1em;
@@ -531,27 +482,6 @@ footer .container {
   .about-description {
     font-size: 1rem;
   }
-  .section-intro .container {
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-  }
-  .our-mission .container {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .our-vision .container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .section-intro,
-  .our-mission,
-  .our-vision {
-    text-align: center;
-  }
 }
 @media (max-width: 610px) {
   .go-up {
@@ -575,6 +505,16 @@ footer .container {
   }
   .page-heading {
     font-size: 3em;
+  }
+  .contact {
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .container > * {
+    width: 100%;
   }
 }
 @media (max-width: 425px) {

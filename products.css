@@ -278,143 +278,58 @@ p {
   font-size: 5rem;
   font-weight: 500;
 }
-.section-intro .container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 3em;
-  max-height: fit-content;
-}
-.section-intro .container > * {
-  flex: 1;
-}
-.about-img img {
-  object-fit: contain;
-  max-height: 700px;
-}
-.about-content {
-  padding: 0 2em;
+.services {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 50px 0 70px 0;
 }
-.about-content .container {
+.services .container {
+  padding: 20px 0;
+  max-width: 1170px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-}
-.section-title {
-  margin: 1em 0;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--primary-color);
 }
 .section-heading {
-  padding: 0.5em 0;
-}
-.section-description {
-  font-size: 1.1em;
-}
-.our-mission,
-.our-vision,
-.our-team {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2em 0;
-}
-.our-mission .container,
-.our-vision .container {
-  padding: 0 2em;
-  width: 100%;
-  max-width: 1170px;
-  display: flex;
-  flex: 1 1 auto;
-  gap: 20px;
-}
-.our-mission .container > *,
-.our-vision .container > * {
-  flex: 1;
-}
-.mission-content,
-.vision-content {
-  display: flex;
-  flex-direction: column;
-}
-.mission-img,
-.vision-img {
-  max-width: fit-content;
-  display: flex;
-  justify-content: space-between;
-}
-.testimonial-section * {
-  color: var(--white);
-}
-.testimonial-section .container {
-  margin: 1em 0;
-  width: 100%;
-  max-width: 1170px;
-}
-.team-title,
-.testimonial-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  font-weight: bold;
-}
-.member-name,
-.testimonial-name {
-  font-size: 1.3em;
-  color: var(--black);
-}
-.testimonial-company {
-  color: var(--complementary-color);
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.our-team .container {
-  width: 100%;
-  max-width: 1170px;
-  display: flex;
-  flex-direction: column;
+  padding: 20px 0;
   text-align: center;
-}
-.our-team .container > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.team-cards {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 .card {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
-}
-.card-content {
-  background-color: var(--white);
+  gap: 60px;
   position: relative;
-  top: -20px;
-  width: 80%;
 }
-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.product-card-item {
+  border-radius: 10px;
+  position: relative;
+  aspect-ratio: 16/13;
+  width: 300px;
+  outline: 2px solid var(--black);
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-article .container {
+.card-layer {
+  color: var(--white);
+  height: 100%;
   width: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  padding: 10px;
+}
+.product-card-item:hover .card-layer {
+  opacity: 1;
 }
 footer {
   padding: 60px;
@@ -456,7 +371,6 @@ footer .container {
 .page-heading {
   text-transform: uppercase;
 }
-
 .footer-section-content {
   display: flex;
   flex-direction: column;
@@ -487,7 +401,6 @@ footer .container {
 .show {
   display: flex;
 }
-
 @media screen and (max-width: 1440px) {
   .logo .container {
     margin: 1em;
@@ -530,27 +443,6 @@ footer .container {
   }
   .about-description {
     font-size: 1rem;
-  }
-  .section-intro .container {
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-  }
-  .our-mission .container {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .our-vision .container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .section-intro,
-  .our-mission,
-  .our-vision {
-    text-align: center;
   }
 }
 @media (max-width: 610px) {

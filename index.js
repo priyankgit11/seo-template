@@ -1,4 +1,4 @@
-// Adding background Image to all cards
+//////////////////////////////////////////////////////////////// Adding background Image to all cards
 const cardItems = Array.from(document.querySelectorAll(".product-card-item"));
 const cardsImages = Array.from(document.querySelectorAll(".product-card-img"));
 console.log(cardItems);
@@ -95,3 +95,24 @@ function hideMenu() {
   const menu = document.querySelector(".vertical-menu");
   menu.style.display = "none";
 }
+
+/////////////////////////////////////////////////////////////////// Increasing Counter
+const countFn = function (element, minCount) {
+  const target = element.innerHTML;
+  const inc = Math.round(target / minCount);
+  let count = 0;
+  const counter = setInterval(function () {
+    if (count <= target) {
+      element.innerText = count;
+      count += inc;
+      console.log(count, minCount);
+    } else {
+      element.innerText = target;
+      clearInterval(counter);
+    }
+  }, 10);
+};
+const counters = Array.from(document.querySelectorAll(".number"));
+const countersCount = counters.map((ele) => parseInt(ele.textContent));
+const minCount = Math.min(...countersCount);
+for (let i = 0; i < counters.length; i++) countFn(counters[i], minCount);
